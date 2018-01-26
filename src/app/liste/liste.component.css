@@ -1,0 +1,22 @@
+.card {
+  width: 30%;
+  box-sizing: border-box;
+  margin:10px 0;
+}
+
+.container{
+	display: flex;
+	margin: 15px 0;
+	justify-content: space-between;
+	flex-wrap: wrap
+
+
+
+}
+img{
+	transition: opacity 1s;
+            opacity: 0;
+}
+ img.ng-lazyloaded {
+            opacity: 1;
+        }

@@ -1,0 +1,16 @@
+<article class="container">
+		<mat-card class="card" *ngFor=" let poke of data">
+			<mat-card-header>
+				<div mat-card-avatar class="example-header-image"></div>
+				<mat-card-title>{{poke.name}}</mat-card-title>
+			</mat-card-header>
+			 <img mat-card-image 
+			 [defaultImage]="poke.ThumbnailImage"
+             [lazyLoad]="poke.ThumbnailImage"
+             [useSrcset]="true"
+			 > 
+
+
+		</mat-card>
+
+</article>
