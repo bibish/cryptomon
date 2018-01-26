@@ -1,0 +1,19 @@
+
+
+<div *ngIf="auth.user | async; then authenticated else guest">
+        <!-- template will replace this div -->
+</div>
+<!-- User NOT logged in -->
+<ng-template #guest>
+    <h3>choose your connexion mode</h3>
+	<button mat-raised-button color="warn" (click)="auth.googleLogin()">Google</button>
+
+</ng-template>
+<!-- User logged in -->
+<ng-template #authenticated>
+    <div *ngIf="auth.user | async as user">
+        <h3>yopyop {{ user.displayName }}</h3>
+        <button mat-raised-button color="warn" (click)="auth.signOut()">Logout</button>
+        <button mat-raised-button color="warn" (click)="showData()">pokelist</button>
+    </div>
+</ng-template>
